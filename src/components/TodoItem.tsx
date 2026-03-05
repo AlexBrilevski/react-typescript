@@ -1,12 +1,15 @@
 import { FC } from "react";
+import classes from "./TodoItem.module.css";
 
-type TodoPropsType = {
+type TodoProps = {
   text: string
 };
 
-const Todo: FC<TodoPropsType> = ({ text }) => {
+const Todo: FC<TodoProps> = ({ text }) => {
   return (
-    <li>{text}</li>
+    <li className={classes.item}>
+      {text}
+    </li>
   );
 };
 
